@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Kendrick Jenkins: aspiring cloud engineer, certifications, and hands-on projects.">
+  <title>Kendrick Jenkins | Cloud Portfolio</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: #f3f6fa;
+      color: #203047;
+      font-family: Arial, sans-serif;
+      line-height: 1.7;
+    }
+
+    header {
+      background: #142b40;
+      color: white;
+      padding: 72px 24px;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 6vw, 3.5rem);
+      line-height: 1.2;
+    }
+
+    .subtitle {
+      color: #a9e3d8;
+      font-size: 1.2rem;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      margin-top: 24px;
+    }
+
+    nav a { color: white; }
+
+    main { padding: 24px; }
+
+    section {
+      background: white;
+      margin: 24px 0;
+      padding: 28px;
+      border: 1px solid #dce4ed;
+      border-radius: 12px;
+      scroll-margin-top: 20px;
+    }
+
+    h2 { margin-top: 0; }
+
+    .status {
+      display: inline-block;
+      background: #e3f3ee;
+      color: #205b4c;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #52657a;
+    }
+
+    a:focus-visible {
+      outline: 3px solid #de9a20;
+      outline-offset: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <h1>Kendrick Jenkins</h1>
+      <p class="subtitle">Aspiring Cloud Engineer</p>
+      <p>
+        Based in Honolulu, Hawaii. Building practical skills
+        in cloud infrastructure, networking, and automation.
+      </p>
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I'm working toward a career in cloud engineering.
+        With CompTIA A+ and Network+ certifications completed,
+        I'm developing my skills through hands-on projects.
+      </p>
+      <p>
+        This portfolio will document what I build, how I test it,
+        and how I troubleshoot problems along the way.
+      </p>
+    </section>
+
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <ul>
+        <li>CompTIA A+</li>
+        <li>CompTIA Network+</li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <article>
+        <h3>AWS Portfolio Website</h3>
+        <span class="status">In progress</span>
+        <p>
+          Building this static website with HTML and CSS,
+          tracking changes in GitHub, and preparing to host it
+          on Amazon S3 with Amazon CloudFront.
+        </p>
+        <p>
+          Planned features include HTTPS delivery, a private
+          S3 origin, and documented deployment and cleanup steps.
+        </p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>Kendrick Jenkins · Cloud Engineering Portfolio</p>
+  </footer>
+</body>
+</html>
