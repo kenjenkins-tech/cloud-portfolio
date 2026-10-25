@@ -48,8 +48,48 @@ https://d36fitrw1zr5sn.cloudfront.net
 - Why the default root object matters.
 - How to verify HTTPS settings and private origin access.
 
+## Updating the Website
+
+1. Edit index.html in GitHub.
+2. Commit the changes with a descriptive message.
+3. Download the updated file, keeping its name as index.html.
+4. Upload it to the existing S3 bucket, replacing index.html.
+5. Open the CloudFront distribution's Invalidations tab.
+6. Create an invalidation using the path /*.
+7. Wait for the invalidation to complete.
+8. Open the CloudFront HTTPS address in a fresh private window.
+9. Verify the updated content appears.
+
+Successfully tested by publishing the "Live on AWS" project update.
+
+## Deployment Summary
+
+1. Create a general-purpose S3 bucket in us-east-1.
+2. Keep Block Public Access enabled and ACLs disabled.
+3. Use SSE-S3 encryption.
+4. Upload index.html to the bucket root.
+5. Create a CloudFront distribution using the S3 bucket as its origin.
+6. Use Origin Access Control and grant the distribution read access
+   through the S3 bucket policy.
+7. Set the default root object to index.html.
+8. Set the viewer protocol policy to Redirect HTTP to HTTPS.
+9. Verify CloudFront access works and anonymous S3 access is denied.
+
+## Cleanup Plan — Not Executed
+
+The website remains running as my portfolio.
+
+If retiring this project:
+1. Preserve the website source and documentation in GitHub.
+2. Disable the CloudFront distribution.
+3. Wait for the disabling update to finish deploying.
+4. Delete the CloudFront distribution.
+5. Delete its OAC if no other distribution uses it.
+6. Empty the project S3 bucket, then delete the bucket.
+7. Review billing after usage data updates for any remaining costs.
+
 ## Next Improvements
 
-- Practice updating the deployed website and its cache.
 - Add my resume and professional links.
-- Document deployment and cleanup procedures.
+- Add more completed projects.
+- Add an architecture diagram.
